@@ -78,7 +78,7 @@ router.patch('/:id', async (req, res) => {
         if (updatePerson.matchedCount === 0) {
             res.status(422).json({ message: 'O usuário não foi encontrado!' })
         }
-        res.status(200).json(person)
+        res.status(200).json({message: 'Usuário atualizado com exido!'})
     } catch (error) {
         res.status(500).json({ error: error })
     }
